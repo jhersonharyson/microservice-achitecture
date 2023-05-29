@@ -10,35 +10,12 @@
 npm install
 ```
 
-
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Run the services
+- To run go to each microservice folder
+```
+npm start
+```
 
 
-## Thanks
-- Node JS
-- React JS
-- Docer && Kubernetes
-- Mongodb && mariaDB
-- Aws
-- NATS 
-- And all of my friends who continuously inspire me
-
-# microservice-achitecture-comp
-# microservice-achitecture-comp
-# microservice-achitecture-comp
-# microservice-achitecture-comp
-# microservice-achitecture-comp
+AWS:    
+https://github.com/awslabs/amazon-ecs-nodejs-microservices/tree/master
