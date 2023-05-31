@@ -5,7 +5,7 @@
 - You can either use your git commands to clone the project or you can simple download the whole Project
 
 ## Installing the Packages
-- To install all the dependecies go to folder
+- To install all the dependecies go to each microservice folder
 ```
 npm install
 ```
@@ -17,5 +17,5 @@ npm start
 ```
 
 
-AWS:    
+AWS: 
 https://github.com/awslabs/amazon-ecs-nodejs-microservices/tree/master

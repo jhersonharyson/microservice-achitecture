@@ -18,9 +18,8 @@ export default ({postId}) => {
             <form onSubmit={submitNewCommand}>
                 
                 <div className="form-group">
-                    <label for="name" >New Comment</label>
+                    <label htmlFor="name" >New Comment</label>
                     <input value={content} onChange={e=>setContent(e.target.value) } type="text" className="form-control" />
-
                 </div>
 <button className="btn btn-primary">Submit</button>
             </form>
