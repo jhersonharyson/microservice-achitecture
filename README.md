@@ -38,7 +38,7 @@ O workshop será dividido em três dias de atividades intensas, que abordarão t
 - Discussão sobre a resiliência e o tratamento de falhas em arquiteturas orientadas a eventos.
 - Implementação de técnicas para o gerenciamento de eventos e o controle de fluxo.
 - Análise e monitoramento de sistemas baseados em microserviços orientados a eventos.
-- Atividade prática: Projeto
+- Atividade prática: Projeto e desenvolvimento
 
 # microservice
 
