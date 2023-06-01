@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-const CreatePost = ({ setUpdate }) => {
+const NewPost = ({ setUpdate }) => {
   const [title, setTitle] = useState("");
 
   const submitPost = async (e) => {
@@ -15,7 +15,7 @@ const CreatePost = ({ setUpdate }) => {
     setTitle("");
     document.location.reload()
   };
-  const refresh  = (e) => {
+  const refresh = (e) => {
     e.preventDefault();
     document.location.reload()
   }
@@ -39,4 +39,4 @@ const CreatePost = ({ setUpdate }) => {
 };
 
 
-export default CreatePost
+export default NewPost

@@ -1,6 +1,6 @@
 import React from "react";
 
-export default ({ comments }) => {
+const ModeratedComment = ({ comments }) => {
   const renderComments = comments.map((comment) => {
     let content;
     if (comment.status === "approved") {
@@ -19,3 +19,5 @@ export default ({ comments }) => {
 
   return <ul>{renderComments}</ul>;
 };
+
+export default ModeratedComment;

@@ -3,17 +3,18 @@ import axios from 'axios'
 import Comments from './Comments'
 import CommentsList from './GetComment'
 
-const GetPosts = () => {
+const Posts = () => {
 
     const [posts, setPosts] = useState({})
-    const fatchPosts = async () => {
-        await axios.get('http://localhost:4002/posts').then(result => {
-            console.log(result.data)
-            setPosts(result.data)
 
-        }).catch(err => {
-            console.log(err)
-        })
+
+    const fatchPosts = async () => {
+        try {
+            const response = await axios.get('http://localhost:4002/posts');
+            setPosts(response.data)
+        } catch (e) {
+            console.log(e)
+        }
     }
 
     useEffect(() => {
@@ -41,4 +42,4 @@ const GetPosts = () => {
         {renderPosts}
     </div>
 }
-export default GetPosts
+export default Posts
