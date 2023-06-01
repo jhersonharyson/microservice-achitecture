@@ -65,7 +65,7 @@ const consume = async (msg) => {
         const comment = comments?.find(comment => {
             return comment.id === id
         })
-        if(comment){
+        if (comment) {
             comment.status = status
         }
 

@@ -16,13 +16,12 @@ const queueConnection = async () => {
     await channel.assertQueue(eventBus);
 
     channel.consume(eventBus, (msg) => {
-        console.log("asdasdasdad ********************************")
         channel.sendToQueue('posts', msg.content)
         channel.sendToQueue('comments', msg.content)
         channel.sendToQueue('moderations', msg.content)
         channel.sendToQueue('query', msg.content)
-      });
-    
+    });
+
 
 }
 
