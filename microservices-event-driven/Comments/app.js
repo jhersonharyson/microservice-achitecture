@@ -40,10 +40,10 @@ app.post('/posts/:id/comments', async (req, res) => {
     comments.push({ id: commentsId, content: content });
     commentsByPostId[req.params.id] = comments
 
-    const data ={
+    const data = {
         type: "Created Comment", data: {
-            id: commentsId, content, 
-            postId: req.params.id, 
+            id: commentsId, content,
+            postId: req.params.id,
             status: 'pending'
         }
     }
@@ -56,21 +56,24 @@ app.post('/posts/:id/comments', async (req, res) => {
 
 const consume = async (msg) => {
     console.log("POST /events")
-    const { type, data } = JSON.parse(msg.content.toString());
+    const { type, data: payload } = JSON.parse(msg.content.toString());
 
     // its call to comments server to modared comment
     if (type === 'CommentModerated') {
-        const { postId, id, status, content } = data
+        const { postId, id, status, content } = payload
         const comments = commentsByPostId[postId]
-        const comment = comments.find(comment => {
+        const comment = comments?.find(comment => {
             return comment.id === id
         })
-        comment.status = status
+        if(comment){
+            comment.status = status
+        }
 
 
         const data = {
-            type: 'CommentUpdated', data: {
-                id: data.id,
+            type: 'CommentUpdated',
+            data: {
+                id: payload.id,
                 postId,
                 status,
                 content

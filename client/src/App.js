@@ -5,10 +5,10 @@ import CreatePost from "./CreatePost";
 import GetPost from "./GetPosts";
 
 const App = () => {
-  return ( <div className="container">
-      <p> Create New Post </p>
+  return ( <div className="container w-75 mt-5">
+      <h2> Create New Post </h2>
       <CreatePost/>
-      <p>Posts</p>
+      <h3 className="ml-0 my-3">Posts</h3>
       <GetPost/>
     </div>)
     

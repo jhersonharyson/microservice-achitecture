@@ -1,0 +1,1 @@
+cd Query && npm install && npm start

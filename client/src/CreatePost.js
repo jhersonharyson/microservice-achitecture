@@ -15,6 +15,10 @@ const CreatePost = ({ setUpdate }) => {
     setTitle("");
     document.location.reload()
   };
+  const refresh  = (e) => {
+    e.preventDefault();
+    document.location.reload()
+  }
   return (
     <div>
       <form onSubmit={submitPost}>
@@ -28,6 +32,7 @@ const CreatePost = ({ setUpdate }) => {
           />
         </div>
         <button className="btn btn-primary">Post</button>
+        <button className="btn btn-success ml-2" onClick={refresh}>Refresh</button>
       </form>
     </div>
   );

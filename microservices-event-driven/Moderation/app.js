@@ -22,18 +22,19 @@ const queueConnection = async () => {
 
 
 const consume = async (msg) => {
-
-    const { type, data } = JSON.parse(msg.content.toString());
+    const { type, data: payload } = JSON.parse(msg.content.toString());
+    console.log("mod", type)
 
     // its call to comments server to modared comment
     if (type === 'Created Comment') {
-        const status = data.content.includes('NodeJs') ? 'rejected' : 'approved';
+        const status = payload.content?.includes('NodeJs') ? 'rejected' : 'approved';
         const data = {
-            type: 'CommentModerated', data: {
-                id: data.id,
-                postId: data.postId,
+            type: 'CommentModerated',
+            data: {
+                id: payload.id,
+                postId: payload.postId,
                 status,
-                content: data.content
+                content: payload.content
             }
         }
 
